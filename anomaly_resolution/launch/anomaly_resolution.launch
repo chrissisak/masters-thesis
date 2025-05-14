@@ -1,0 +1,15 @@
+<launch>
+    <!-- Launch the edge detection node -->
+    <node name="grasp_detection_node" 
+          pkg="grasp_detection" 
+          type="grasp_detection_node" 
+          output="screen">
+    </node>
+
+    <!-- Launch the anomaly resolution node -->
+    <node name="anomaly_resolution_node" 
+          pkg="anomaly_resolution" 
+          type="resolution_pipeline.py" 
+          output="screen">
+    </node>
+</launch>
